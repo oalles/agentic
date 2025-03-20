@@ -15,9 +15,9 @@ spring:
           temperature: 0.7
     mcp.client:
       sse.connections:
-        geocoder-mcp-server:
+        monitor-mcp-server:
           url: http://localhost:8081
-        timezone-mcp-server:
+        rag-mcp-server:
           url: http://localhost:8082
 
 logging:

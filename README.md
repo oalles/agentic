@@ -13,7 +13,60 @@ The system architecture is based on three main components that communicate with 
 - A RAG (Retrieval Augmented Generation) service to answer queries with contextual knowledge, exposed via MCP.
 - A monitoring service to provide system status information, exposed via MCP.
 
-<div style="position: relative; padding-bottom: 63.49206349206349%; height: 0;"><iframe src="https://www.loom.com/embed/8f2e07544fa1403c9f6fb2e07c817ad0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+```mermaid
+flowchart TD
+    subgraph application["application-agent (Port: 8080)"]
+        app["🤖 Application Agent"]
+        style app fill:#f0f0f0,stroke:#333,stroke-width:2px
+        mc1["Monitor MCP Client"]
+        mc2["RAG MCP Client"]
+        app --- mc1
+        app --- mc2
+        style app font-weight:bold
+    end
+    
+    subgraph system-status["Monitor Service (Port: 8081)"]
+        status["🤖 System Status Service"]
+        style status fill:#eef7e6,stroke:#333,stroke-width:2px
+        status-server["Monitor MCP Server"]
+        status --- status-server
+        style status font-weight:bold
+    end
+
+    subgraph rag-service["RAG Service (Port: 8082)"]
+        rag["🤖 RAG Agent"]
+        style rag fill:#e6f7ff,stroke:#333,stroke-width:2px
+        rag-server["Rag MCP Server"]
+        kb["Redis Vector Store"]
+        rag --- rag-server
+        rag --- kb
+        style rag font-weight:bold
+    end
+
+    %% Increased spacing between components using invisible nodes
+    invisible1[" "]
+    invisible2[" "]
+    
+    application ~~~ invisible1 ~~~ rag-service
+    application ~~~ invisible2 ~~~ system-status
+    
+    %% Connect with longer edges
+    mc1 --> rag-server
+    mc2 --> status-server
+
+    %% Hide invisible nodes
+    style invisible1 fill:none,stroke:none
+    style invisible2 fill:none,stroke:none
+
+    classDef server fill:#f0f0f0,stroke:#666,stroke-width:1px
+    class rag-server,status-server server
+
+    classDef client fill:#f0f0f0,stroke:#666,stroke-width:1px
+    class mc1,mc2 client
+
+    classDef data fill:#f9f9f9,stroke:#999,stroke-width:1px
+    class kb,api data
+```
 
 ## Modules
 
@@ -84,6 +137,10 @@ mvn spring-boot:run
 Send requests to the application agent on port 8080. The system will coordinate communication with the RAG and monitor services to retrieve 
 the necessary information and respond accordingly.
 
-## System Diagram
+## Video
 
-The system architecture is based on a central agent that communicates via MCP clients with specialized services, each running on its own port and offering specific capabilities.
+Audio is awful. Just watch the video without sound. 🙂
+
+[![Using it](./agentic-tn.png)](https://www.loom.com/embed/8f2e07544fa1403c9f6fb2e07c817ad0)
+
+
