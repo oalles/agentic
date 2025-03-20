@@ -1,0 +1,20 @@
+Título: Importancia de la monitorización en entornos empresariales
+
+La monitorización es un componente esencial para garantizar que los servicios de una empresa funcionen de manera continua, segura y eficiente. Permite detectar problemas, anticiparse a fallos, y optimizar el rendimiento de los sistemas.
+
+En Agentic Enterprise, la monitorización incluye:
+- Estado de servicios críticos.
+- Uso de recursos (memoria, CPU, tráfico).
+- Eventos de error o advertencia.
+- Disponibilidad de servicios de negocio.
+
+Beneficios:
+1. Reducción de tiempo de inactividad.
+2. Mejora en la experiencia del cliente.
+3. Mayor visibilidad sobre la operación.
+4. Capacidad de respuesta rápida ante incidentes.
+
+Buenas prácticas:
+- Establecer umbrales de alerta.
+- Automatizar la recolección y análisis de métricas.
+- Integrar dashboards y notificaciones.

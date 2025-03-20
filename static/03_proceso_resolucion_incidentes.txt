@@ -1,0 +1,19 @@
+Título: Proceso de resolución de incidentes en Agentic Enterprise
+
+Cuando un servicio de negocio presenta un problema, es esencial seguir un proceso ordenado para minimizar el impacto y restaurar la operación.
+
+Pasos típicos:
+1. **Detección**: mediante alertas o reportes.
+2. **Diagnóstico**: análisis de logs, métricas y estados.
+3. **Acción correctiva**: reinicio de servicios, ajuste de recursos.
+4. **Verificación**: confirmar que el problema se resolvió.
+5. **Documentación**: registrar el incidente y la solución.
+
+Herramientas de Agentic Enterprise:
+- Panel de estado del sistema.
+- Logs detallados accesibles por servicio.
+- Panel de métricas con tendencias históricas.
+- Endpoint de reinicio de servicios (automatizado).
+
+Objetivo:
+Minimizar el tiempo medio de resolución (MTTR) y prevenir incidentes futuros.

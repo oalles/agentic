@@ -1,0 +1,17 @@
+Título: Operación diaria de Agentic Enterprise – Buenas prácticas
+
+La gestión diaria de Agentic Enterprise incluye tareas rutinarias que aseguran que todo funcione correctamente y que los servicios de negocio estén siempre disponibles.
+
+Tareas comunes:
+- Revisión del estado general del sistema al inicio de jornada.
+- Validación de que todos los servicios de negocio estén operativos.
+- Monitorización de métricas clave (uso de memoria, CPU, latencia).
+- Revisión de logs recientes para detectar anomalías.
+- Gestión de actualizaciones planificadas.
+
+Recomendaciones:
+- Automatiza reportes diarios del estado del sistema.
+- Configura alertas ante degradación de rendimiento.
+- Realiza auditorías periódicas de configuración.
+
+Una operación sólida garantiza estabilidad, confianza y capacidad de respuesta frente a demandas cambiantes.

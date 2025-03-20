@@ -1,0 +1,31 @@
+server:
+  port: 8082
+
+business:
+  contact-email: info@agenticenterprise.io
+
+
+spring:
+  application:
+    name: rag-agent
+  ai:
+    vectorstore:
+      redis:
+        index: default-index
+        initialize-schema: true
+    ollama:
+      init:
+        pull-model-strategy: when_missing
+      embedding:
+        enabled: true
+      chat:
+        enabled: true
+        url: http://127.0.0.1:11434
+        options:
+          model: llama3.2
+          temperature: 0.7
+
+logging:
+  level:
+    es.omarall: DEBUG
+    org.springframework.ai: DEBUG

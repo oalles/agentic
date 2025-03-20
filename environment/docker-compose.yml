@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  redis:
+    image: 'redis/redis-stack-server:edge'
+    ports:
+      - '6379:6379'
+    volumes:
+      - ~/.agentic/redis:/data
+    environment:
+      - REDIS_ARGS=--appendonly yes --appendfilename appendonly.aof --appendfsync always --loglevel verbose --notify-keyspace-events AKE
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure

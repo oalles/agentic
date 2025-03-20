@@ -1,0 +1,18 @@
+Título: Comprender los servicios de negocio en Agentic Enterprise
+
+Agentic Enterprise es una plataforma orientada a ofrecer servicios de negocio inteligentes y escalables. Los servicios de negocio son unidades funcionales que resuelven necesidades específicas de los clientes o usuarios, como procesamiento de pedidos, análisis de datos, o emisión de informes.
+
+Cada servicio de negocio tiene las siguientes características:
+1. Propósito claro: responde a una necesidad real.
+2. Interfaces definidas: cómo interactúan otros sistemas o usuarios con él.
+3. Monitorización propia: permite observar su estado y rendimiento.
+
+Ejemplo:
+Un servicio de 'Análisis de ventas' recibe datos de múltiples fuentes, los procesa en tiempo real, y genera informes para los gerentes comerciales.
+
+Importancia:
+- Permite automatizar tareas clave.
+- Mejora la eficiencia operativa.
+- Facilita la toma de decisiones basada en datos.
+
+Agentic Enterprise ofrece herramientas para diseñar, desplegar y monitorizar estos servicios de negocio de forma sencilla.

@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+spring:
+  ai:
+    mcp:
+      server:
+        type: ASYNC
+        enabled: true
+        name: monitor-mcp-server
+        version: 1.0.0
+  application:
+    name: monitor
+
+logging:
+  level:
+    es.omarall: DEBUG
+    org.springframework.ai: DEBUG
