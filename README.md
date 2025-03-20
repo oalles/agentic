@@ -13,9 +13,7 @@ The system architecture is based on three main components that communicate with 
 - A RAG (Retrieval Augmented Generation) service to answer queries with contextual knowledge, exposed via MCP.
 - A monitoring service to provide system status information, exposed via MCP.
 
-```markdown
 [![Watch the video](https://www.loom.com/embed/8f2e07544fa1403c9f6fb2e07c817ad0)](https://www.loom.com/share/8f2e07544fa1403c9f6fb2e07c817ad0)
-```
 
 ## Modules
 
